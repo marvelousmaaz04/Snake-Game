@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=New+Tegomin&family=Poppins:wght@300;400&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.body{
+.body {
     background-image: url('../img/bg.jpg');
     min-height: 100vh;
     /* try setting min-height if image is not getting displayed */
@@ -25,7 +25,7 @@
     font-family: 'New Tegomin', serif;
 }
 
-#hiscoreBox{
+#hiscoreBox {
     position: absolute;
     top: 60px;
     right: 200px;
@@ -34,7 +34,7 @@
     font-family: 'New Tegomin', serif;
 }
 
-#board{
+#board {
     background: linear-gradient(rgb(183, 240, 183), rgb(236, 236, 170));
     height: 90vmin;
     width: 90vmin;
@@ -42,25 +42,32 @@
     display: grid;
     grid-template-rows: repeat(18, 1fr);
     grid-template-columns: repeat(18, 1fr);
-    
+
 }
 
-.head{
-    background: linear-gradient(rgb(238, 156, 156),rgb(240, 240, 151));
+.head {
+    background: linear-gradient(rgb(238, 156, 156), rgb(240, 240, 151));
     transform: scale(1.02);
     border: .2px solid purple;
     border-radius: 9px;
 }
 
-.snake{
+.snake {
     background-color: purple;
     border: .25vmin solid white;
     border-radius: 12px;
 }
 
-.food{
-    background: linear-gradient(red,purple);
+.food {
+    background: linear-gradient(red, purple);
     /* linear gradient works with background only. and while changing properties with hyphen at runtime remove it before */
     border: .25vmin solid black;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    #hiscoreBox {
+        right: 170px;
+    }
+
 }
